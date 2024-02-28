@@ -9,8 +9,9 @@ def get_value_by_nested_key(obj, key):
         # Traverse the dictionary using the nested keys
         for k in keys:
             value = value[k]
+            print(value)
         return value
-    except (KeyError, TypeError):
+    except (KeyError):
         return None  # Key not found or object is not subscriptable
 
 
